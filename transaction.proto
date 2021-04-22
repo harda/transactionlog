@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package trx;
+
+// Creates an log in the database
+service TransactionService {
+    rpc SaveTransactionLog(TransactionLog) returns (ID) {}
+    rpc SelectTransactionLog(ID) returns (TransactionLog) {}
+    rpc UpdateTransactionLog (TransactionLog) returns (ID) {}
+    rpc DeleteTransactionLog(ID) returns (ID) {}
+}
+
+message TransactionLog {
+    int64 id = 1;
+    int32 pcode = 2;
+    int64 amount = 3;
+    int32 trace = 4;
+    string localtime = 5;
+    string localdate = 6;
+    int32 posentry = 7;
+    string pan = 8;
+    int32 nii = 9;
+    int32 poscon = 10;
+    string refnum = 11;
+    string rc = 12;
+    string termid = 13;
+    string merchantid = 14;
+    string bit59 = 15;
+    string rawmsg = 16;
+}
+
+message ID {
+    string id = 1;
+}
