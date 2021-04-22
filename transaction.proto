@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package trx;
+option go_package="github.com/harda/transactionlog";
 
 // Creates an log in the database
 service TransactionService {
