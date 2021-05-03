@@ -27,6 +27,7 @@ message TransactionLog {
     string merchantid = 14;
     string bit59 = 15;
     string rawmsg = 16;
+    int32 mti = 17;
 }
 
 message ID {
